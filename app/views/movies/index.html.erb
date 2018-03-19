@@ -1,0 +1,7 @@
+<h1>Welcome to Silverbird Cinemas</h1>
+<h3>Here are our recent movies</h3>
+<ul>
+  <% @movies.each do |movie| %>
+    <li><%= link_to movie['title'], movie_path(movie['id'])  %></li>
+  <% end %>
+</ul>

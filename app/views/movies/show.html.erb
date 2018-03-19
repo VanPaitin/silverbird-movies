@@ -1,0 +1,9 @@
+<%= image_tag @movie['thumbnail_url'] %>
+
+<h3><%= @movie['title'] %></h3>
+<p><%= @movie['synopsis'] %></p>
+<h4><span><b>Casts: </b></span><%= @movie['casts'].sub(/casts:/i, '') %></h4>
+<h4><%= @movie['running_time'] %></h4>
+<h4><span><b>Genres: </b></span><%= @movie['genres'] %></h4>
+<h4>Release Date: <%= Time.new(@movie['release_date']).strftime("%b %-d, %Y") %></h4>
+
